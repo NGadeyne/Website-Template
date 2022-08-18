@@ -1,0 +1,23 @@
+{# app/templates/base.html #}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Flask{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="description" content="ma description optimisée seo">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    {% block styles %}{% endblock %}
+</head>
+
+<body>
+    {% block content %}{% endblock %}
+</body>
+
+<footer>
+    <p>COPYRIGHT 2022 - Nom du site</p>   
+    <p>Mentions Légales</p>
+    <p>Politique de confidentialité</p>
+</footer>
+
+</html>
